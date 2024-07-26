@@ -1,0 +1,15 @@
+<div class="over-all">
+    <div style="display: flex; column-gap: 5%; height: 10%;align-items: center; padding: 0% 2%;">
+        <input type="file" #fileInput (change)="onFileChange($event)" multiple accept=".xlsx,.xls" />
+        <button style="height: 30px;" (click)="downloadMergedFile()" [disabled]="!mergedFileUrl">Download Merged
+            File</button>
+        <button style="height: 30px;" (click)="clearFileInput()" [disabled]="!mergedFileUrl">Clear</button>
+    </div>
+
+    <div style="height: 90%; overflow-y: scroll;" *ngIf="selectedFiles.length > 0">
+        <h3 style="padding: 0% 1%;;">Selected Files:</h3>
+        <ul>
+            <li *ngFor="let file of selectedFiles">{{ file }}</li>
+        </ul>
+    </div>
+</div>
