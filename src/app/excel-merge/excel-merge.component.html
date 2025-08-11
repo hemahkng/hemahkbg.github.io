@@ -1,15 +1,137 @@
-<div class="over-all">
-    <div style="display: flex; column-gap: 5%; height: 10%;align-items: center; padding: 0% 2%;">
-        <input type="file" #fileInput (change)="onFileChange($event)" multiple accept=".xlsx,.xls" />
-        <button style="height: 30px;" (click)="downloadMergedFile()" [disabled]="!mergedFileUrl">Download Merged
-            File</button>
-        <button style="height: 30px;" (click)="clearFileInput()" [disabled]="!mergedFileUrl">Clear</button>
+<div class="body">
+    <div class="sidebar">
+        <img src="assets/mypropic2.jpg" alt="Profile Picture" class="profile-pic" />
+        <div class="name">Hemanth Kumar</div>
+        <div class="bio">Angular & Ionic Developer | UI/UX Enthusiast</div>
+        <ul class="menu">
+            <li><a href="#" (click)="showSection('about')">About Me</a></li>
+            <li><a href="#" (click)="showSection('projects')">Projects</a></li>
+            <li><a href="#" (click)="showSection('contact')">Contact</a></li>
+        </ul>
     </div>
 
-    <div style="height: 90%; overflow-y: scroll;" *ngIf="selectedFiles.length > 0">
-        <h3 style="padding: 0% 1%;;">Selected Files:</h3>
-        <ul>
-            <li *ngFor="let file of selectedFiles">{{ file }}</li>
-        </ul>
+    <div class="main">
+        <!-- About Me Section -->
+        <div id="about" class="section">
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p class="intro">Hi! I'm Hemanth Kumar — a Front-End Developer with ~2.6 years of experience
+                    specializing in Angular and Ionic for both web and hybrid mobile app development.</p>
+
+                <p>
+                    I have hands-on experience working on <strong>Hospital Information Systems</strong>, <strong>School
+                        Management Systems</strong>, and <strong>Dashboard Designs</strong>.
+                    My work involves UI/UX optimization, performance improvements, and integrating REST APIs into
+                    scalable applications.
+                </p>
+
+                <h3>Technical Skills</h3>
+                <ul class="facts">
+                    <li><strong>Frontend Frameworks & Libraries:</strong> Angular CLI, Components, Services,
+                        Directives, Pipes, Routing, Lifecycle Hooks</li>
+                    <li><strong>Ionic Framework:</strong> Mobile app development, Native plugins, Cordova integration
+                    </li>
+                    <li><strong>Apache Cordova:</strong> APK builds, domain restriction handling, mobile printing</li>
+                    <li><strong>UI Libraries:</strong> Angular Material, Bootstrap, TailwindCSS</li>
+                    <li><strong>State Management:</strong> RxJS & NgRx</li>
+                    <li><strong>Architecture:</strong> Module Federation (Webpack 5) for Micro Frontends</li>
+                    <li><strong>Languages:</strong> TypeScript, JavaScript (ES6+), HTML5, CSS3 / SCSS</li>
+                    <li><strong>Build & Deployment:</strong> Cordova + Angular hybrid builds, CI/CD pipelines,
+                        Git/GitHub/GitLab</li>
+                </ul>
+
+                <h3>Mobile App Experience</h3>
+                <ul class="facts">
+                    <li>Created Android APK builds with Cordova for Angular applications</li>
+                    <li>Implemented Bluetooth barcode printing in Android using Cordova plugins</li>
+                    <li>Handled domain restrictions for remote module loading in mobile apps by converting to local
+                        Angular libraries</li>
+                    <li>Integrated REST APIs for real-time data updates in hybrid mobile apps</li>
+                    <li>Developed offline data storage and synchronization features using IndexedDB and local storage
+                    </li>
+                    <li>Customized native device functionalities like camera, file sharing, and push notifications</li>
+                    <li>Optimized mobile app performance by lazy-loading modules and reducing bundle sizes</li>
+                    <li>Worked with platform-specific styles to ensure consistent UI across Android and iOS</li>
+                    <li>Debugged and resolved platform compatibility issues using Android Studio and Chrome DevTools
+                    </li>
+                </ul>
+
+                <h3>UI/UX Work</h3>
+                <ul class="facts">
+                    <li>Designed dynamic dashboards with TailwindCSS, multiple charts, and responsive grid layouts</li>
+                    <li>Built editable Angular tables with dynamic row add/remove features and default row constraints
+                    </li>
+                    <li>Developed multi-level nested menus and dynamic routing for HIS systems</li>
+                    <li>Implemented ExcelJS dependent dropdowns with hidden sheets and named ranges</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="projects" class="section" style="display:none;">
+            <h2>Projects</h2>
+            <div class="projects-container">
+
+                <!-- SpellBee Project -->
+                <div class="project-card">
+                    <h3>SpellBee International</h3>
+                    <img style="width: -webkit-fill-available; margin: 10px 0 10px 0; height: 230px;"
+                        src="assets/schools.jpg">
+                    <p>
+                        SpellBee International is an educational organization that operates across multiple schools,
+                        helping students enhance vocabulary, spelling accuracy, and language skills through specialized
+                        programs.
+                    </p>
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Multi-School Registration for students from different institutions</li>
+                        <li>Special Programs for vocabulary & spelling improvement</li>
+                        <li>Progress Tracking to monitor student performance</li>
+                    </ul>
+                </div>
+
+                <!-- Cliniq Project -->
+                <div class="project-card">
+                    <h3>Cliniq - Hospital Queue Management</h3>
+                    <img style="width: -webkit-fill-available; margin: 10px 0 10px 0; height: 230px;"
+                        src="assets/hospitals.jpg">
+                    <p>
+                        Cliniq is a hospital queue management software designed to reduce patient wait times
+                        and improve efficiency using intelligent scheduling.
+                    </p>
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Optimized Queue Allocation based on estimated diagnosis times</li>
+                        <li>Reduced Waiting Time through intelligent scheduling</li>
+                        <li>Automated Scheduling with real-time data updates</li>
+                        <li>Integration with hospital management systems and SMS notifications</li>
+                    </ul>
+                </div>
+
+                <!-- Asset Tracker -->
+                <div class="project-card">
+                    <h3>Empower</h3>
+                    <img style="width: -webkit-fill-available; margin: 10px 0 10px 0; height: 230px;"
+                        src="assets/assets.png">
+                    <p>
+                        Asset Tracker is a management system that organizes assets, asset types, and individual items
+                        with
+                        barcode generation and scanning for quick identification and tracking.
+                    </p>
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Manage Asset Types and individual Asset Items</li>
+                        <li>Generate and attach unique barcodes for each item</li>
+                        <li>Scan barcodes to instantly retrieve item details</li>
+                        <li>Track location, movement history, and maintenance logs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact" class="section" style="display:none;">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+            <p>GitHub: <a href="https://github.com/hemahkng" target="_blank">github.com/hemahkng</a></p>
+        </div>
     </div>
 </div>
