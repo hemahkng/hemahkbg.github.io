@@ -128,10 +128,34 @@
             </div>
         </div>
 
-        <div id="contact" class="section" style="display:none;">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-            <p>GitHub: <a href="https://github.com/hemahkng" target="_blank">github.com/hemahkng</a></p>
+        <div id="contact" class="section contact-section" style="display:none;">
+            <h2>Contact Me</h2>
+            <form [formGroup]="contactForm" class="contact-form" (ngSubmit)="onSubmit()">
+                <label>
+                    Name
+                    <input type="text" formControlName="name" placeholder="Your Name" required />
+                </label>
+                <label>
+                    Email
+                    <input type="email" formControlName="email" placeholder="Your Email" required />
+                </label>
+                <label>
+                    Message
+                    <textarea rows="5" formControlName="message" placeholder="Your Message" required></textarea>
+                </label>
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:hemanthkumarng1@gmail.com">hemanthkumarng1@gmail.com</a></p>
+                <p>GitHub: <a href="https://github.com/hemahkng" target="_blank">github.com/hemahkng</a></p>
+                <p>Phone: <a href="tel:+917993600621">+91 79936 00621</a></p>
+            </div>
         </div>
+
     </div>
+</div>
+
+<div class="messagediv" *ngIf="openMessage">
+    <span *ngIf="errorMessage">{{ errorMessage }}</span>
+    <span *ngIf="successMessage">{{ successMessage }}</span>
 </div>

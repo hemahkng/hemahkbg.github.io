@@ -103,6 +103,10 @@
     }
 }
 
+.menu a {
+    cursor: pointer;
+}
+
 p,
 h1,
 h2,
@@ -254,4 +258,96 @@ span {
 .project-card ul li {
     margin-bottom: 6px;
     color: #555;
+}
+
+.contact-section {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    color: #333;
+}
+
+.contact-section h2 {
+    color: #ff6bcb;
+    /* matching your headings */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-top: 6px;
+    padding: 12px 14px;
+    border: 1.5px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #ff6bcb;
+    outline: none;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 14px 0;
+    background-color: #ff6bcb;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.contact-form button:hover {
+    background-color: #e055a3;
+}
+
+.contact-info {
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+}
+
+.contact-info a {
+    color: #ff6bcb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.messagediv {
+    display: block;
+    position: fixed;
+    background: #293b3a;
+    color: white;
+    bottom: 10px;
+    padding: 10px;
+    left: 50%;
+    min-width: calc(100% / 4);
+    text-align: center;
+    animation: fadeInUp 0.5s ease forwards;
+    transition: background 0.3s ease;
 }
