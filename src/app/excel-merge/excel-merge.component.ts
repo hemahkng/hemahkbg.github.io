@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit, AfterViewInit } from '@angular/core';
 // import { ExcelMergeService } from '../excel-merge.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
@@ -15,11 +15,13 @@ interface TemplateParams {
   templateUrl: './excel-merge.component.html',
   styleUrls: ['./excel-merge.component.scss']
 })
-export class ExcelMergeComponent implements OnInit {
+export class ExcelMergeComponent implements OnInit, AfterViewInit {
+  @ViewChild('scrollContainer') scrollContainer!: ElementRef;
   contactForm: FormGroup;
   submitted = false;
   successMessage = '';
   errorMessage = '';
+  activeSection: string = 'home';
   openMessage: boolean = false;
 
   constructor(private fb: FormBuilder) {
@@ -37,10 +39,10 @@ export class ExcelMergeComponent implements OnInit {
   ngOnInit(): void { }
 
   showSection(id: any) {
-    console.log("id", id);
-    document.querySelectorAll('.section').forEach((sec: any) => sec.style.display = 'none');
-    const section = document.getElementById(id)!;
-    section.style.display = 'block';
+    this.activeSection = id;
+    // document.querySelectorAll('.section').forEach((sec: any) => sec.style.display = 'none');
+    // const section = document.getElementById(id)!;
+    // section.style.display = 'block';
   }
 
   onSubmit(): void {
@@ -85,5 +87,31 @@ export class ExcelMergeComponent implements OnInit {
     setTimeout(() => {
       this.openMessage = false;
     }, 3000);
+  }
+
+  ngAfterViewInit() {
+    this.scrollContainer.nativeElement.addEventListener('scroll', this.onScroll.bind(this));
+  }
+
+  onScroll() {
+    const sections = document.querySelectorAll('.section');
+    let currentSection = '';
+
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      const sectionId = section.getAttribute('id') || '';
+
+      // Middle of the screen logic for accuracy
+      if (
+        rect.top <= window.innerHeight / 4 &&
+        rect.bottom >= window.innerHeight / 4
+      ) {
+        currentSection = sectionId;
+      }
+    });
+
+    if (currentSection && this.activeSection !== currentSection) {
+      this.activeSection = currentSection;
+    }
   }
 }

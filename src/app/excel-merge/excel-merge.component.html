@@ -1,47 +1,127 @@
 <div class="body">
     <div class="sidebar">
         <img src="assets/mypropic2.jpg" alt="Profile Picture" class="profile-pic" />
-        <div class="name">Hemanth Kumar</div>
+        <div class="name">Hemanth Kumar N G</div>
         <div class="bio">Angular & Ionic Developer | UI/UX Enthusiast</div>
+
+        <div class="iconsls">
+            <a class="icon" href="https://github.com/hemahkng" target="_blank">
+                <img src="assets/icons8-github-100 (1).png" alt="">
+            </a>
+            <a class="icon" href="https://www.linkedin.com/in/ng-hemanth-kumar" target="_blank">
+                <img src="assets/icons8-linkedin-100.png" alt="">
+            </a>
+            <a class="icon" href="mailto:hemanthkumarng1@gmail.com">
+                <img src="assets/icons8-mail-100.png" alt="">
+            </a>
+            <a class="icon" href="tel:+917993600621">
+                <img src="assets/icons8-phone-100.png" alt="">
+            </a>
+        </div>
         <ul class="menu">
-            <li><a href="#" (click)="showSection('about')">About Me</a></li>
-            <li><a href="#" (click)="showSection('projects')">Projects</a></li>
-            <li><a href="#" (click)="showSection('contact')">Contact</a></li>
+            <li><a href="#home" [class.active]="activeSection === 'home'" (click)="showSection('home')">Home</a></li>
+            <li><a href="#about" [class.active]="activeSection === 'about'" (click)="showSection('about')">About Me</a>
+            </li>
+            <li><a href="#projects" [class.active]="activeSection === 'projects'"
+                    (click)="showSection('projects')">Projects</a></li>
+            <li><a href="#contact" [class.active]="activeSection === 'contact'"
+                    (click)="showSection('contact')">Contact</a></li>
         </ul>
     </div>
 
-    <div class="main">
+    <div #scrollContainer class="main">
+        <!-- Home Section -->
+        <div id="home" class="section full-sec">
+            <div class="naming">
+                <span>Hemanth Kumar N G</span>
+                <p class="typing">I'm a Front-End Developer with Angular and Ionic.</p>
+            </div>
+        </div>
+
         <!-- About Me Section -->
         <div id="about" class="section">
             <div class="about-content">
                 <h2>About Me</h2>
-                <p class="intro">Hi! I'm Hemanth Kumar — a Front-End Developer with ~2.6 years of experience
-                    specializing in Angular and Ionic for both web and hybrid mobile app development.</p>
-
-                <p>
-                    I have hands-on experience working on <strong>Hospital Information Systems</strong>, <strong>School
-                        Management Systems</strong>, and <strong>Dashboard Designs</strong>.
-                    My work involves UI/UX optimization, performance improvements, and integrating REST APIs into
-                    scalable applications.
+                <p class="intro">As an experienced Angular and Ionic developer, I have contributed to multiple projects
+                    involving hybrid mobile app development and responsive web applications. My work has focused on
+                    delivering optimized UI/UX, integrating REST APIs, and ensuring cross-platform compatibility. I have
+                    successfully collaborated with cross-functional teams to implement scalable front-end architectures,
+                    improve performance, and ensure smooth deployments. With a strong background in front-end
+                    technologies and mobile frameworks, I bring a detail-oriented approach to building efficient,
+                    user-friendly, and maintainable applications.
                 </p>
 
                 <h3>Technical Skills</h3>
                 <ul class="facts">
-                    <li><strong>Frontend Frameworks & Libraries:</strong> Angular CLI, Components, Services,
-                        Directives, Pipes, Routing, Lifecycle Hooks</li>
-                    <li><strong>Ionic Framework:</strong> Mobile app development, Native plugins, Cordova integration
+                    <li>
+                        <strong>Frontend Frameworks & Libraries:</strong>
+                        <ul class="listitem" style="grid-template-columns: 1fr 1fr 1fr 1fr;">
+                            <li>Angular CLI</li>
+                            <li>Components</li>
+                            <li>Services</li>
+                            <li>Directives</li>
+                            <li>Pipes</li>
+                            <li>Routing</li>
+                            <li>Lifecycle Hooks</li>
+                        </ul>
                     </li>
-                    <li><strong>Apache Cordova:</strong> APK builds, domain restriction handling, mobile printing</li>
-                    <li><strong>UI Libraries:</strong> Angular Material, Bootstrap, TailwindCSS</li>
-                    <li><strong>State Management:</strong> RxJS & NgRx</li>
-                    <li><strong>Architecture:</strong> Module Federation (Webpack 5) for Micro Frontends</li>
-                    <li><strong>Languages:</strong> TypeScript, JavaScript (ES6+), HTML5, CSS3 / SCSS</li>
-                    <li><strong>Build & Deployment:</strong> Cordova + Angular hybrid builds, CI/CD pipelines,
-                        Git/GitHub/GitLab</li>
+                    <li>
+                        <strong>Ionic Framework:</strong>
+                        <ul class="listitem" style="grid-template-columns: 1fr 1fr 1fr;">
+                            <li>Mobile app development</li>
+                            <li>Native plugins</li>
+                            <li>Cordova integration</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Apache Cordova:</strong>
+                        <ul class="listitem" style="grid-template-columns: 1fr 1fr 1fr;">
+                            <li>APK builds</li>
+                            <li>domain restriction handling</li>
+                            <li>mobile printing</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>UI Libraries:</strong>
+                        <ul class="listitem" style="grid-template-columns: 1fr 1fr 1fr;">
+                            <li>Angular Material</li>
+                            <li>Bootstrap</li>
+                            <li>TailwindCSS</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>State Management:</strong>
+                        <ul class="listitem" style="grid-template-columns: 1fr 1fr 1fr;">
+                            <li>RxJS & NgRx</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Architecture:</strong>
+                        <ul class="listitem" style="grid-template-columns: 1fr 1fr;">
+                            <li>Module Federation (Webpack 5) for Micro Frontends</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Languages:</strong>
+                        <ul class="listitem" style="grid-template-columns: 1fr 1fr 1fr 1fr;">
+                            <li>TypeScript</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>HTML5</li>
+                            <li>CSS3 / SCSS</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Build & Deployment:</strong>
+                        <ul class="listitem" style="grid-template-columns: auto 1fr 1fr;">
+                            <li>Cordova + Angular hybrid builds</li>
+                            <li>CI/CD pipelines</li>
+                            <li>Git/GitHub/GitLab</li>
+                        </ul>
+                    </li>
                 </ul>
 
                 <h3>Mobile App Experience</h3>
-                <ul class="facts">
+                <ul class="experience-card">
                     <li>Created Android APK builds with Cordova for Angular applications</li>
                     <li>Implemented Bluetooth barcode printing in Android using Cordova plugins</li>
                     <li>Handled domain restrictions for remote module loading in mobile apps by converting to local
@@ -56,18 +136,34 @@
                     </li>
                 </ul>
 
-                <h3>UI/UX Work</h3>
-                <ul class="facts">
-                    <li>Designed dynamic dashboards with TailwindCSS, multiple charts, and responsive grid layouts</li>
-                    <li>Built editable Angular tables with dynamic row add/remove features and default row constraints
-                    </li>
-                    <li>Developed multi-level nested menus and dynamic routing for HIS systems</li>
-                    <li>Implemented ExcelJS dependent dropdowns with hidden sheets and named ranges</li>
-                </ul>
+                <h3 class="section-title">UI/UX Work</h3>
+                <div class="uiux-grid">
+                    <div class="uiux-card">
+                        <img src="assets/dashboardchart.webp" alt="Dashboards" />
+                        <h4>Dynamic Dashboards</h4>
+                        <p>Created responsive dashboards with TailwindCSS, multiple charts, and adaptive grid layouts.
+                        </p>
+                    </div>
+                    <div class="uiux-card">
+                        <img src="assets/table.jpg" alt="Editable Tables" />
+                        <h4>Editable Angular Tables</h4>
+                        <p>Built tables with add/remove rows, default row constraints, and real-time updates.</p>
+                    </div>
+                    <div class="uiux-card">
+                        <img src="assets/menus.jpg" alt="Nested Menus" />
+                        <h4>Multi-level Menus</h4>
+                        <p>Developed nested menus with dynamic routing for HIS systems, ensuring smooth navigation.</p>
+                    </div>
+                    <div class="uiux-card">
+                        <img src="assets/dropdown.avif" alt="ExcelJS Dropdowns" />
+                        <h4>ExcelJS Dropdowns</h4>
+                        <p>Implemented dependent dropdowns with hidden sheets and named ranges for data accuracy.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div id="projects" class="section" style="display:none;">
+        <div id="projects" class="section">
             <h2>Projects</h2>
             <div class="projects-container">
 
@@ -128,27 +224,32 @@
             </div>
         </div>
 
-        <div id="contact" class="section contact-section" style="display:none;">
-            <h2>Contact Me</h2>
-            <form [formGroup]="contactForm" class="contact-form" (ngSubmit)="onSubmit()">
-                <label>
-                    Name
-                    <input type="text" formControlName="name" placeholder="Your Name" required />
-                </label>
-                <label>
-                    Email
-                    <input type="email" formControlName="email" placeholder="Your Email" required />
-                </label>
-                <label>
-                    Message
-                    <textarea rows="5" formControlName="message" placeholder="Your Message" required></textarea>
-                </label>
-                <button type="submit">Send Message</button>
-            </form>
-            <div class="contact-info">
-                <p>Email: <a href="mailto:hemanthkumarng1@gmail.com">hemanthkumarng1@gmail.com</a></p>
-                <p>GitHub: <a href="https://github.com/hemahkng" target="_blank">github.com/hemahkng</a></p>
-                <p>Phone: <a href="tel:+917993600621">+91 79936 00621</a></p>
+        <div id="contact" class="section">
+            <div class="contact-section">
+                <h2>Contact Me</h2>
+                <form [formGroup]="contactForm" class="contact-form" (ngSubmit)="onSubmit()">
+                    <label>
+                        Name
+                        <input type="text" formControlName="name" placeholder="Your Name" required />
+                    </label>
+                    <label>
+                        Email
+                        <input type="email" formControlName="email" placeholder="Your Email" required />
+                    </label>
+                    <label>
+                        Message
+                        <textarea rows="5" formControlName="message" placeholder="Your Message" required></textarea>
+                    </label>
+                    <button type="submit">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <p>Email: <a href="mailto:hemanthkumarng1@gmail.com">hemanthkumarng1@gmail.com</a></p>
+                    <p>GitHub: <a href="https://github.com/hemahkng" target="_blank">github.com/hemahkng</a></p>
+                    <p>Phone: <a href="tel:+917993600621">+91 79936 00621</a></p>
+                </div>
+            </div>
+            <div class="rights">
+                <span>©2025, Hemanth Kumar N G</span>
             </div>
         </div>
 

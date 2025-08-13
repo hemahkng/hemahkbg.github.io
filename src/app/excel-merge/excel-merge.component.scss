@@ -14,6 +14,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media(max-width: 480px) {
+        display: none;
+    }
 }
 
 .profile-pic {
@@ -29,19 +33,22 @@
 .name {
     font-size: 1.2em;
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .bio {
-    font-size: 0.9em;
+    font-size: 0.87em;
     text-align: center;
     margin-bottom: 20px;
     color: #ccc;
+    font-weight: bold;
 }
 
 .menu {
     list-style: none;
     padding: 0;
     width: 100%;
+    font-weight: bold;
 }
 
 .menu li {
@@ -49,7 +56,7 @@
 }
 
 .menu a {
-    color: white;
+    color: #ccc;
     text-decoration: none;
     padding: 10px;
     display: block;
@@ -64,9 +71,18 @@
 /* Main content */
 .main {
     flex: 1;
-    padding: 20px;
+    padding: 5px 20px 5px 20px;
     overflow-y: auto;
     font-family: math;
+    scroll-behavior: smooth;
+
+    @media(max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        padding: 0 !important;
+        align-items: center;
+    }
 }
 
 .section {
@@ -125,19 +141,29 @@ span {
     display: flex;
     justify-content: center;
     animation: fadeInUp 1s ease forwards;
+
+    @media(max-width: 480px) {
+        padding: 0px 0px;
+        max-width: 90vw;
+        width: 90vw;
+    }
 }
 
 /* Content card style */
 .about-content {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border-radius: 16px;
+    // background: rgba(255, 255, 255, 0.05);
+    // backdrop-filter: blur(10px);
+    // border-radius: 16px;
     padding: 30px;
     max-width: 900px;
     color: #fff;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    // box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     animation: slideUp 0.8s ease forwards;
     justify-self: center;
+
+    @media(max-width: 500px) {
+        max-width: -webkit-fill-available;
+    }
 }
 
 /* Headings */
@@ -146,6 +172,10 @@ span {
     font-size: 2.2rem;
     margin-bottom: 15px;
     text-align: center;
+
+    @media(max-width: 480px) {
+        font-size: 2.2rem;
+    }
 }
 
 .about-content h3 {
@@ -158,7 +188,11 @@ span {
 .about-content p {
     line-height: 1.6;
     color: #ddd;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+
+    @media(max-width: 480px) {
+        font-size: 0.8rem;
+    }
 }
 
 .intro {
@@ -172,6 +206,17 @@ span {
 .facts {
     list-style: none;
     padding: 0;
+
+    ul {
+        display: grid;
+        column-gap: 25px;
+        margin: 10px 0 0 0;
+
+        @media(max-width: 480px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
 }
 
 .facts li {
@@ -184,6 +229,77 @@ span {
 
 .facts li:hover {
     background: rgba(255, 255, 255, 0.1);
+}
+
+.experience-card {
+    // background: #ffffff;
+    display: grid;
+    row-gap: 10px;
+    font-size: 1.1em;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    margin: 20px 0;
+
+    @media(max-width: 480px) {
+        font-size: 0.8rem;
+    }
+}
+
+.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+
+    @media(max-width: 480px) {
+        font-size: 1.2rem;
+    }
+}
+
+.uiux-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.uiux-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.uiux-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.uiux-card img {
+    width: calc(100%);
+    height: 160px;
+}
+
+.uiux-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: black;
+
+    @media(max-width: 480px) {
+        font-size: 0.9rem;
+    }
+}
+
+.uiux-card p {
+    font-size: 0.95rem;
+    color: #555;
+
+    @media(max-width: 480px) {
+        font-size: 0.8rem;
+    }
 }
 
 /* Animations */
@@ -211,6 +327,18 @@ span {
     }
 }
 
+#projects.section {
+    @media(max-width: 480px) {
+        max-width: 80vw;
+    }
+}
+
+#contact.section {
+    @media(max-width: 480px) {
+        max-width: 80vw;
+        width: 80vw;
+    }
+}
 
 /* Projects Section */
 .projects-container {
@@ -242,12 +370,20 @@ span {
 .project-card p {
     color: #333;
     line-height: 1.6;
+
+    @media(max-width: 480px) {
+        font-size: 0.8rem;
+    }
 }
 
 .project-card h4 {
     margin-top: 15px;
     color: #444;
     font-size: 1.1rem;
+
+    @media(max-width: 480px) {
+        font-size: 0.9rem;
+    }
 }
 
 .project-card ul {
@@ -258,6 +394,10 @@ span {
 .project-card ul li {
     margin-bottom: 6px;
     color: #555;
+
+    @media(max-width: 480px) {
+        font-size: 0.8rem;
+    }
 }
 
 .contact-section {
@@ -266,8 +406,9 @@ span {
     background: white;
     padding: 30px 25px;
     border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
     color: #333;
+    background: beige;
+    box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.12);
 }
 
 .contact-section h2 {
@@ -315,6 +456,10 @@ span {
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 10px;
+
+    @media(max-width: 480px) {
+        font-size: 0.8rem;
+    }
 }
 
 .contact-form button:hover {
@@ -350,4 +495,121 @@ span {
     text-align: center;
     animation: fadeInUp 0.5s ease forwards;
     transition: background 0.3s ease;
+}
+
+.iconsls {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 75%;
+    justify-items: center;
+
+    .icon {
+        width: max-content;
+        display: flex;
+        justify-content: center;
+        background: white;
+        border-radius: 10px;
+        padding: 3px;
+
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+.menu a.active {
+    background-color: #0366d6;
+    color: white;
+    border-radius: 5px;
+}
+
+.full-sec {
+    background-image: url('/assets/coding.jpg');
+    background-size: cover;
+    /* so the image fills the element */
+    background-position: center;
+    /* keeps it centered */
+    height: 92.5vh;
+    position: relative;
+
+    @media(max-width: 480px) {
+        min-height: 23vh;
+        max-width: 78vw !important;
+        width: 78vw !important;
+    }
+
+    .naming {
+        justify-self: center;
+        text-align-last: center;
+        position: absolute;
+        top: 40vh;
+
+        @media(max-width: 480px) {
+            top: 10vh;
+
+            span {
+                font-size: 1.5em !important;
+            }
+
+            p {
+                font-size: 1em !important;
+            }
+        }
+
+        span {
+            color: darkorange;
+            font-size: 3em;
+            font-weight: bold;
+            text-shadow: 3px 0px 3px #3f3f3f;
+        }
+
+        p {
+            font-size: 2em;
+            color: floralwhite;
+            text-shadow: 3px 0px 0px #3f3f3f;
+        }
+
+        .typing {
+            white-space: nowrap;
+            overflow: hidden;
+            // border-right: 3px solid orange;
+            /* blinking cursor */
+            width: 0;
+            /* start hidden */
+            animation: typing 3s steps(50, end) forwards, blink 0.7s step-end infinite;
+        }
+    }
+}
+
+/* typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* cursor blinking */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.rights {
+    margin: 2em 0px 0px 0px;
+    justify-self: center;
+    font-weight: bold;
+    font-size: 1em;
+    color: grey;
+}
+
+.listitem {
+    @media(max-width: 480px) {
+        font-size: 0.8rem;
+    }
 }
