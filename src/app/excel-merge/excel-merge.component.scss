@@ -525,7 +525,8 @@ span {
 }
 
 .full-sec {
-    background-image: url('/assets/coding.jpg');
+    // background-image: url('./assets/coding.jpg');
+    background-image: url('../../assets/coding.jpg');
     background-size: cover;
     /* so the image fills the element */
     background-position: center;
