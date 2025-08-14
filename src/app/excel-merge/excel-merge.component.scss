@@ -631,6 +631,7 @@ span {
 .pagemain {
     display: flex;
     flex-direction: column;
+    overflow: unset;
 }
 
 .toggle-header {
