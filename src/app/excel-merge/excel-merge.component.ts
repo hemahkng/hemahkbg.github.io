@@ -23,6 +23,7 @@ export class ExcelMergeComponent implements OnInit, AfterViewInit {
   errorMessage = '';
   activeSection: string = 'home';
   openMessage: boolean = false;
+  isSidebarOpen = false;
 
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({
@@ -40,6 +41,7 @@ export class ExcelMergeComponent implements OnInit, AfterViewInit {
 
   showSection(id: any) {
     this.activeSection = id;
+    this.closeSidebar();
     // document.querySelectorAll('.section').forEach((sec: any) => sec.style.display = 'none');
     // const section = document.getElementById(id)!;
     // section.style.display = 'block';
@@ -113,5 +115,13 @@ export class ExcelMergeComponent implements OnInit, AfterViewInit {
     if (currentSection && this.activeSection !== currentSection) {
       this.activeSection = currentSection;
     }
+  }
+
+  toggleSidebar() {
+    this.isSidebarOpen = !this.isSidebarOpen;
+  }
+
+  closeSidebar() {
+    this.isSidebarOpen = false;
   }
 }

@@ -1,5 +1,5 @@
 <div class="body">
-    <div class="sidebar">
+    <div class="sidebar" [class.open]="isSidebarOpen">
         <img src="assets/mypropic2.jpg" alt="Profile Picture" class="profile-pic" />
         <div class="name">Hemanth Kumar N G</div>
         <div class="bio">Angular & Ionic Developer | UI/UX Enthusiast</div>
@@ -30,6 +30,16 @@
     </div>
 
     <div #scrollContainer class="main">
+
+        <div class="toggle-header">
+            <!-- Toggle button -->
+            <button class="menu-btn" (click)="toggleSidebar()">
+                ☰
+            </button>
+            <!-- Overlay (click to close) -->
+            <div class="overlay" *ngIf="isSidebarOpen" (click)="closeSidebar()"></div>
+        </div>
+
         <!-- Home Section -->
         <div id="home" class="section full-sec">
             <div class="naming">
