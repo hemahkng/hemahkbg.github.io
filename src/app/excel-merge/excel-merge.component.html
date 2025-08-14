@@ -29,8 +29,7 @@
         </ul>
     </div>
 
-    <div #scrollContainer class="main">
-
+    <div class="pagemain">
         <div class="toggle-header">
             <!-- Toggle button -->
             <button class="menu-btn" (click)="toggleSidebar()">
@@ -40,229 +39,241 @@
             <div class="overlay" *ngIf="isSidebarOpen" (click)="closeSidebar()"></div>
         </div>
 
-        <!-- Home Section -->
-        <div id="home" class="section full-sec">
-            <div class="naming">
-                <span>Hemanth Kumar N G</span>
-                <p class="typing">I'm a Front-End Developer with Angular and Ionic.</p>
+        <div #scrollContainer class="main">
+
+            <!-- Home Section -->
+            <div id="home" class="section full-sec">
+                <div class="naming">
+                    <span>Hemanth Kumar N G</span>
+                    <p class="typing">I'm a Front-End Developer with Angular and Ionic.</p>
+                </div>
             </div>
-        </div>
 
-        <!-- About Me Section -->
-        <div id="about" class="section">
-            <div class="about-content">
-                <h2>About Me</h2>
-                <p class="intro">As an experienced Angular and Ionic developer, I have contributed to multiple projects
-                    involving hybrid mobile app development and responsive web applications. My work has focused on
-                    delivering optimized UI/UX, integrating REST APIs, and ensuring cross-platform compatibility. I have
-                    successfully collaborated with cross-functional teams to implement scalable front-end architectures,
-                    improve performance, and ensure smooth deployments. With a strong background in front-end
-                    technologies and mobile frameworks, I bring a detail-oriented approach to building efficient,
-                    user-friendly, and maintainable applications.
-                </p>
+            <!-- About Me Section -->
+            <div id="about" class="section">
+                <div class="about-content">
+                    <h2>About Me</h2>
+                    <p class="intro">As an experienced Angular and Ionic developer, I have contributed to multiple
+                        projects
+                        involving hybrid mobile app development and responsive web applications. My work has focused on
+                        delivering optimized UI/UX, integrating REST APIs, and ensuring cross-platform compatibility. I
+                        have
+                        successfully collaborated with cross-functional teams to implement scalable front-end
+                        architectures,
+                        improve performance, and ensure smooth deployments. With a strong background in front-end
+                        technologies and mobile frameworks, I bring a detail-oriented approach to building efficient,
+                        user-friendly, and maintainable applications.
+                    </p>
 
-                <h3>Technical Skills</h3>
-                <ul class="facts">
-                    <li>
-                        <strong>Frontend Frameworks & Libraries:</strong>
-                        <ul class="listitem" style="grid-template-columns: 1fr 1fr 1fr 1fr;">
-                            <li>Angular CLI</li>
-                            <li>Components</li>
-                            <li>Services</li>
-                            <li>Directives</li>
-                            <li>Pipes</li>
-                            <li>Routing</li>
-                            <li>Lifecycle Hooks</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Ionic Framework:</strong>
-                        <ul class="listitem" style="grid-template-columns: 1fr 1fr 1fr;">
-                            <li>Mobile app development</li>
-                            <li>Native plugins</li>
-                            <li>Cordova integration</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Apache Cordova:</strong>
-                        <ul class="listitem" style="grid-template-columns: 1fr 1fr 1fr;">
-                            <li>APK builds</li>
-                            <li>domain restriction handling</li>
-                            <li>mobile printing</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>UI Libraries:</strong>
-                        <ul class="listitem" style="grid-template-columns: 1fr 1fr 1fr;">
-                            <li>Angular Material</li>
-                            <li>Bootstrap</li>
-                            <li>TailwindCSS</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>State Management:</strong>
-                        <ul class="listitem" style="grid-template-columns: 1fr 1fr 1fr;">
-                            <li>RxJS & NgRx</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Architecture:</strong>
-                        <ul class="listitem" style="grid-template-columns: 1fr 1fr;">
-                            <li>Module Federation (Webpack 5) for Micro Frontends</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Languages:</strong>
-                        <ul class="listitem" style="grid-template-columns: 1fr 1fr 1fr 1fr;">
-                            <li>TypeScript</li>
-                            <li>JavaScript (ES6+)</li>
-                            <li>HTML5</li>
-                            <li>CSS3 / SCSS</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Build & Deployment:</strong>
-                        <ul class="listitem" style="grid-template-columns: auto 1fr 1fr;">
-                            <li>Cordova + Angular hybrid builds</li>
-                            <li>CI/CD pipelines</li>
-                            <li>Git/GitHub/GitLab</li>
-                        </ul>
-                    </li>
-                </ul>
+                    <h3>Technical Skills</h3>
+                    <ul class="facts">
+                        <li>
+                            <strong>Frontend Frameworks & Libraries:</strong>
+                            <ul class="listitem" style="grid-template-columns: 1fr 1fr 1fr 1fr;">
+                                <li>Angular CLI</li>
+                                <li>Components</li>
+                                <li>Services</li>
+                                <li>Directives</li>
+                                <li>Pipes</li>
+                                <li>Routing</li>
+                                <li>Lifecycle Hooks</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Ionic Framework:</strong>
+                            <ul class="listitem" style="grid-template-columns: 1fr 1fr 1fr;">
+                                <li>Mobile app development</li>
+                                <li>Native plugins</li>
+                                <li>Cordova integration</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Apache Cordova:</strong>
+                            <ul class="listitem" style="grid-template-columns: 1fr 1fr 1fr;">
+                                <li>APK builds</li>
+                                <li>domain restriction handling</li>
+                                <li>mobile printing</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>UI Libraries:</strong>
+                            <ul class="listitem" style="grid-template-columns: 1fr 1fr 1fr;">
+                                <li>Angular Material</li>
+                                <li>Bootstrap</li>
+                                <li>TailwindCSS</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>State Management:</strong>
+                            <ul class="listitem" style="grid-template-columns: 1fr 1fr 1fr;">
+                                <li>RxJS & NgRx</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Architecture:</strong>
+                            <ul class="listitem" style="grid-template-columns: 1fr 1fr;">
+                                <li>Module Federation (Webpack 5) for Micro Frontends</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Languages:</strong>
+                            <ul class="listitem" style="grid-template-columns: 1fr 1fr 1fr 1fr;">
+                                <li>TypeScript</li>
+                                <li>JavaScript (ES6+)</li>
+                                <li>HTML5</li>
+                                <li>CSS3 / SCSS</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Build & Deployment:</strong>
+                            <ul class="listitem" style="grid-template-columns: auto 1fr 1fr;">
+                                <li>Cordova + Angular hybrid builds</li>
+                                <li>CI/CD pipelines</li>
+                                <li>Git/GitHub/GitLab</li>
+                            </ul>
+                        </li>
+                    </ul>
 
-                <h3>Mobile App Experience</h3>
-                <ul class="experience-card">
-                    <li>Created Android APK builds with Cordova for Angular applications</li>
-                    <li>Implemented Bluetooth barcode printing in Android using Cordova plugins</li>
-                    <li>Handled domain restrictions for remote module loading in mobile apps by converting to local
-                        Angular libraries</li>
-                    <li>Integrated REST APIs for real-time data updates in hybrid mobile apps</li>
-                    <li>Developed offline data storage and synchronization features using IndexedDB and local storage
-                    </li>
-                    <li>Customized native device functionalities like camera, file sharing, and push notifications</li>
-                    <li>Optimized mobile app performance by lazy-loading modules and reducing bundle sizes</li>
-                    <li>Worked with platform-specific styles to ensure consistent UI across Android and iOS</li>
-                    <li>Debugged and resolved platform compatibility issues using Android Studio and Chrome DevTools
-                    </li>
-                </ul>
+                    <h3>Mobile App Experience</h3>
+                    <ul class="experience-card">
+                        <li>Created Android APK builds with Cordova for Angular applications</li>
+                        <li>Implemented Bluetooth barcode printing in Android using Cordova plugins</li>
+                        <li>Handled domain restrictions for remote module loading in mobile apps by converting to local
+                            Angular libraries</li>
+                        <li>Integrated REST APIs for real-time data updates in hybrid mobile apps</li>
+                        <li>Developed offline data storage and synchronization features using IndexedDB and local
+                            storage
+                        </li>
+                        <li>Customized native device functionalities like camera, file sharing, and push notifications
+                        </li>
+                        <li>Optimized mobile app performance by lazy-loading modules and reducing bundle sizes</li>
+                        <li>Worked with platform-specific styles to ensure consistent UI across Android and iOS</li>
+                        <li>Debugged and resolved platform compatibility issues using Android Studio and Chrome DevTools
+                        </li>
+                    </ul>
 
-                <h3 class="section-title">UI/UX Work</h3>
-                <div class="uiux-grid">
-                    <div class="uiux-card">
-                        <img src="assets/dashboardchart.webp" alt="Dashboards" />
-                        <h4>Dynamic Dashboards</h4>
-                        <p>Created responsive dashboards with TailwindCSS, multiple charts, and adaptive grid layouts.
+                    <h3 class="section-title">UI/UX Work</h3>
+                    <div class="uiux-grid">
+                        <div class="uiux-card">
+                            <img src="assets/dashboardchart.webp" alt="Dashboards" />
+                            <h4>Dynamic Dashboards</h4>
+                            <p>Created responsive dashboards with TailwindCSS, multiple charts, and adaptive grid
+                                layouts.
+                            </p>
+                        </div>
+                        <div class="uiux-card">
+                            <img src="assets/table.jpg" alt="Editable Tables" />
+                            <h4>Editable Angular Tables</h4>
+                            <p>Built tables with add/remove rows, default row constraints, and real-time updates.</p>
+                        </div>
+                        <div class="uiux-card">
+                            <img src="assets/menus.jpg" alt="Nested Menus" />
+                            <h4>Multi-level Menus</h4>
+                            <p>Developed nested menus with dynamic routing for HIS systems, ensuring smooth navigation.
+                            </p>
+                        </div>
+                        <div class="uiux-card">
+                            <img src="assets/dropdown.avif" alt="ExcelJS Dropdowns" />
+                            <h4>ExcelJS Dropdowns</h4>
+                            <p>Implemented dependent dropdowns with hidden sheets and named ranges for data accuracy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="projects" class="section">
+                <h2>Projects</h2>
+                <div class="projects-container">
+
+                    <!-- SpellBee Project -->
+                    <div class="project-card">
+                        <h3>SpellBee International</h3>
+                        <img style="width: -webkit-fill-available; margin: 10px 0 10px 0; height: 230px;"
+                            src="assets/schools.jpg">
+                        <p>
+                            SpellBee International is an educational organization that operates across multiple schools,
+                            helping students enhance vocabulary, spelling accuracy, and language skills through
+                            specialized
+                            programs.
                         </p>
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Multi-School Registration for students from different institutions</li>
+                            <li>Special Programs for vocabulary & spelling improvement</li>
+                            <li>Progress Tracking to monitor student performance</li>
+                        </ul>
                     </div>
-                    <div class="uiux-card">
-                        <img src="assets/table.jpg" alt="Editable Tables" />
-                        <h4>Editable Angular Tables</h4>
-                        <p>Built tables with add/remove rows, default row constraints, and real-time updates.</p>
+
+                    <!-- Cliniq Project -->
+                    <div class="project-card">
+                        <h3>Cliniq - Hospital Queue Management</h3>
+                        <img style="width: -webkit-fill-available; margin: 10px 0 10px 0; height: 230px;"
+                            src="assets/hospitals.jpg">
+                        <p>
+                            Cliniq is a hospital queue management software designed to reduce patient wait times
+                            and improve efficiency using intelligent scheduling.
+                        </p>
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Optimized Queue Allocation based on estimated diagnosis times</li>
+                            <li>Reduced Waiting Time through intelligent scheduling</li>
+                            <li>Automated Scheduling with real-time data updates</li>
+                            <li>Integration with hospital management systems and SMS notifications</li>
+                        </ul>
                     </div>
-                    <div class="uiux-card">
-                        <img src="assets/menus.jpg" alt="Nested Menus" />
-                        <h4>Multi-level Menus</h4>
-                        <p>Developed nested menus with dynamic routing for HIS systems, ensuring smooth navigation.</p>
+
+                    <!-- Asset Tracker -->
+                    <div class="project-card">
+                        <h3>Empower</h3>
+                        <img style="width: -webkit-fill-available; margin: 10px 0 10px 0; height: 230px;"
+                            src="assets/assets.png">
+                        <p>
+                            Asset Tracker is a management system that organizes assets, asset types, and individual
+                            items
+                            with
+                            barcode generation and scanning for quick identification and tracking.
+                        </p>
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Manage Asset Types and individual Asset Items</li>
+                            <li>Generate and attach unique barcodes for each item</li>
+                            <li>Scan barcodes to instantly retrieve item details</li>
+                            <li>Track location, movement history, and maintenance logs</li>
+                        </ul>
                     </div>
-                    <div class="uiux-card">
-                        <img src="assets/dropdown.avif" alt="ExcelJS Dropdowns" />
-                        <h4>ExcelJS Dropdowns</h4>
-                        <p>Implemented dependent dropdowns with hidden sheets and named ranges for data accuracy.</p>
+                </div>
+            </div>
+
+            <div id="contact" class="section">
+                <div class="contact-section">
+                    <h2>Contact Me</h2>
+                    <form [formGroup]="contactForm" class="contact-form" (ngSubmit)="onSubmit()">
+                        <label>
+                            Name
+                            <input type="text" formControlName="name" placeholder="Your Name" required />
+                        </label>
+                        <label>
+                            Email
+                            <input type="email" formControlName="email" placeholder="Your Email" required />
+                        </label>
+                        <label>
+                            Message
+                            <textarea rows="5" formControlName="message" placeholder="Your Message" required></textarea>
+                        </label>
+                        <button type="submit">Send Message</button>
+                    </form>
+                    <div class="contact-info">
+                        <p>Email: <a href="mailto:hemanthkumarng1@gmail.com">hemanthkumarng1@gmail.com</a></p>
+                        <p>GitHub: <a href="https://github.com/hemahkng" target="_blank">github.com/hemahkng</a></p>
+                        <p>Phone: <a href="tel:+917993600621">+91 79936 00621</a></p>
                     </div>
+                </div>
+                <div class="rights">
+                    <span>©2025, Hemanth Kumar N G</span>
                 </div>
             </div>
         </div>
-
-        <div id="projects" class="section">
-            <h2>Projects</h2>
-            <div class="projects-container">
-
-                <!-- SpellBee Project -->
-                <div class="project-card">
-                    <h3>SpellBee International</h3>
-                    <img style="width: -webkit-fill-available; margin: 10px 0 10px 0; height: 230px;"
-                        src="assets/schools.jpg">
-                    <p>
-                        SpellBee International is an educational organization that operates across multiple schools,
-                        helping students enhance vocabulary, spelling accuracy, and language skills through specialized
-                        programs.
-                    </p>
-                    <h4>Key Features:</h4>
-                    <ul>
-                        <li>Multi-School Registration for students from different institutions</li>
-                        <li>Special Programs for vocabulary & spelling improvement</li>
-                        <li>Progress Tracking to monitor student performance</li>
-                    </ul>
-                </div>
-
-                <!-- Cliniq Project -->
-                <div class="project-card">
-                    <h3>Cliniq - Hospital Queue Management</h3>
-                    <img style="width: -webkit-fill-available; margin: 10px 0 10px 0; height: 230px;"
-                        src="assets/hospitals.jpg">
-                    <p>
-                        Cliniq is a hospital queue management software designed to reduce patient wait times
-                        and improve efficiency using intelligent scheduling.
-                    </p>
-                    <h4>Key Features:</h4>
-                    <ul>
-                        <li>Optimized Queue Allocation based on estimated diagnosis times</li>
-                        <li>Reduced Waiting Time through intelligent scheduling</li>
-                        <li>Automated Scheduling with real-time data updates</li>
-                        <li>Integration with hospital management systems and SMS notifications</li>
-                    </ul>
-                </div>
-
-                <!-- Asset Tracker -->
-                <div class="project-card">
-                    <h3>Empower</h3>
-                    <img style="width: -webkit-fill-available; margin: 10px 0 10px 0; height: 230px;"
-                        src="assets/assets.png">
-                    <p>
-                        Asset Tracker is a management system that organizes assets, asset types, and individual items
-                        with
-                        barcode generation and scanning for quick identification and tracking.
-                    </p>
-                    <h4>Key Features:</h4>
-                    <ul>
-                        <li>Manage Asset Types and individual Asset Items</li>
-                        <li>Generate and attach unique barcodes for each item</li>
-                        <li>Scan barcodes to instantly retrieve item details</li>
-                        <li>Track location, movement history, and maintenance logs</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div id="contact" class="section">
-            <div class="contact-section">
-                <h2>Contact Me</h2>
-                <form [formGroup]="contactForm" class="contact-form" (ngSubmit)="onSubmit()">
-                    <label>
-                        Name
-                        <input type="text" formControlName="name" placeholder="Your Name" required />
-                    </label>
-                    <label>
-                        Email
-                        <input type="email" formControlName="email" placeholder="Your Email" required />
-                    </label>
-                    <label>
-                        Message
-                        <textarea rows="5" formControlName="message" placeholder="Your Message" required></textarea>
-                    </label>
-                    <button type="submit">Send Message</button>
-                </form>
-                <div class="contact-info">
-                    <p>Email: <a href="mailto:hemanthkumarng1@gmail.com">hemanthkumarng1@gmail.com</a></p>
-                    <p>GitHub: <a href="https://github.com/hemahkng" target="_blank">github.com/hemahkng</a></p>
-                    <p>Phone: <a href="tel:+917993600621">+91 79936 00621</a></p>
-                </div>
-            </div>
-            <div class="rights">
-                <span>©2025, Hemanth Kumar N G</span>
-            </div>
-        </div>
-
     </div>
 </div>
 
