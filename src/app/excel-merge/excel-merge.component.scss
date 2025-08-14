@@ -3,6 +3,11 @@
     display: flex;
     height: 100vh;
     background-color: #f5f5f5;
+
+    @media(max-width: 480px) {
+        flex-direction: column;
+        overflow-y: scroll;
+    }
 }
 
 /* Sidebar */
@@ -16,7 +21,10 @@
     align-items: center;
 
     @media(max-width: 480px) {
-        display: none;
+        width: 80vw;
+        align-self: center;
+        margin: 10px 0px 10px 0px;
+        border-radius: 10px;
     }
 }
 
@@ -49,6 +57,10 @@
     padding: 0;
     width: 100%;
     font-weight: bold;
+
+    @media(max-width: 480px) {
+        display: none;
+    }
 }
 
 .menu li {
@@ -82,6 +94,7 @@
         width: 100vw;
         padding: 0 !important;
         align-items: center;
+        overflow-y: unset;
     }
 }
 
@@ -97,27 +110,6 @@
     margin-top: 0;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    body {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    .menu {
-        display: flex;
-        gap: 10px;
-    }
-
-    .menu li {
-        margin: 0;
-    }
-}
 
 .menu a {
     cursor: pointer;
@@ -146,6 +138,7 @@ span {
         padding: 0px 0px;
         max-width: 90vw;
         width: 90vw;
+        margin-bottom: 10px;
     }
 }
 
@@ -174,7 +167,7 @@ span {
     text-align: center;
 
     @media(max-width: 480px) {
-        font-size: 2.2rem;
+        font-size: 1.4rem;
     }
 }
 
@@ -330,6 +323,7 @@ span {
 #projects.section {
     @media(max-width: 480px) {
         max-width: 80vw;
+        margin-bottom: 10px;
     }
 }
 
@@ -337,6 +331,7 @@ span {
     @media(max-width: 480px) {
         max-width: 80vw;
         width: 80vw;
+        margin-bottom: 10px;
     }
 }
 
@@ -355,6 +350,12 @@ span {
     border-left: 5px solid #ff6b6b;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    @media(max-width: 480px) {
+        img {
+            height: auto !important;
+        }
+    }
 }
 
 .project-card:hover {
@@ -536,8 +537,10 @@ span {
 
     @media(max-width: 480px) {
         min-height: 23vh;
+        height: 23vh;
         max-width: 78vw !important;
         width: 78vw !important;
+        margin-bottom: 10px;
     }
 
     .naming {
@@ -554,7 +557,7 @@ span {
             }
 
             p {
-                font-size: 1em !important;
+                font-size: 0.9rem !important;
             }
         }
 
